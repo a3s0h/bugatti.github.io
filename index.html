@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="vid">
+            <video autoplay loop muted>
+                <source src="images/video.mp4">
+            </video>
+        </div>
+        <div class="car_name">
+            <h1 id="nme"><span>B</span>uggati</h1>
+            <h1 id="nme"><span>V</span>ayron</h1>
+            <div class="btn">
+                <a href="#">Book a ride</a>
+            </div>
+        </div>
+        <div class="left_content">
+            <div class="car">
+
+                <img src="images/car_main.png" alt="" width="650" height="400">
+                <div class="circle"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const video = document.querySelector('video');
+        video.playbackRate = 0.6; // Adjust the playback speed as needed
+    </script>
+</body>
+
+</html>

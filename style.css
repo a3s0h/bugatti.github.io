@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    /* background-image:  */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.vid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.vid video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+
+.vid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  
+  z-index: -1;
+  pointer-events: none; 
+}
+
+.container{
+    display: flex;
+    overflow: hidden;
+}
+.car_name{
+    margin-left: 20px;
+    margin-top: 70px;
+}
+
+.car_name h1{
+    color: white;
+    font-size: 10rem;
+    
+}
+.car_name h1 span{
+    color: rgb(253, 145, 3);
+    text-shadow: 0 3px 30px rgba(241, 140, 16, 0.5);
+}
+#nme
+{
+  text-shadow: 3px 3px 3px black;
+}
+.btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 10rem;
+    text-align: center;
+    background-color: hsl(36, 100%, 50%);
+    margin-left: 170px;
+    margin-top: 30px;
+    text-shadow: 4px 2px 3px  rgb(253, 160, 0);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    border: 5px solid transparent; /* add a border with no color */
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* add a red glowing box-shadow */
+    color: white;
+    background-color: rgb(255, 201, 5);
+    border-color: rgb(253, 160, 0); /* change the border color to orange */
+  }
+  
+  
+  .btn::before,
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+    
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10rem;
+  }
+  
+  .btn:hover::before,
+  .btn:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+.car_name a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    
+
+}
+
+
+
+.car{
+  margin-left: 200px;
+  margin-top: 200px;
+  /* position: relative; */
+  /* z-index: -1; */
+}
+.car img{
+  filter: brightness(90%);
+  transition: transform 0.5s ease;
+}
+.circle{
+  /* border: 200px sild white; */
+  background-color: rgba(254, 159, 7,1);
+  border-radius: 200px;
+  width: 420px;
+  height: 410px;
+  /* position: absolute; */
+  margin-top: -420px;
+  margin-left: 140px;
+  /* box-shadow: 3px 3px 3px rgba(254, 159, 7,1); */
+}
+
+
+.car img:hover {
+  transform: scale(1.2);
+  
+  }
+
+
+@media all and (max-width:500px)
+{
+  
+  #nme {
+    font-size: 90px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+  }
+  .car_name .btn{
+    margin-left: 40px;
+    width: 120px;
+    padding: 7px 0px;
+  }
+  .car_name .btn a{
+    font-size: 20px;
+  }
+  .left_content{
+    margin-left: -900px;
+    margin-top: 750px;
+    width: 300px;
+    height: 200px;
+  }
+  .left_content .car{
+    width: 100%;
+    height: 100%;
+    margin-top: -200px;
+    margin-left: 630px;
+    /* overflow: hidden; */
+  }
+  .car img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  .circle{
+    width: 180px;
+    height: 180px;
+    margin-top: -180px;
+    margin-left: 62px;
+    background-color: rgba(254, 159, 7,0.7);
+    
+  }
+  .car img:hover {
+    transform: scale(1.2);
+    
+    }
+}
